@@ -1,4 +1,4 @@
-# 把根站发布到 GitHub Pages（仓库名必须是 <用户名>.github.io，才能占住域名根路径）。
+﻿# 把根站发布到 GitHub Pages（仓库名必须是 <用户名>.github.io，才能占住域名根路径）。
 param([string]$Repo = "")
 
 $ErrorActionPreference = "Stop"

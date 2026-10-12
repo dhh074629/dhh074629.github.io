@@ -1,4 +1,4 @@
-# 发布当前软件站到 GitHub Pages。
+﻿# 发布当前软件站到 GitHub Pages。
 # 前提：本机 gh 已登录，且当前目录已经是 git 仓库。
 param([string]$Repo = "")
 

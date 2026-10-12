@@ -1,4 +1,4 @@
-# 一条命令生成一个新软件站，可选直接上线。
+﻿# 一条命令生成一个新软件站，可选直接上线。
 #
 # 用法：
 #   powershell -NoProfile -File deploy\new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明它解决什么"
