@@ -51,7 +51,7 @@
     <div class="codeblock">
       <button class="copy" type="button" data-copy="cmd-add">复制</button>
       <pre id="cmd-add"><code>cd outputs/lab-hub
-pwsh deploy/new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明它解决什么" -Publish</code></pre>
+powershell -NoProfile -File deploy\new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明它解决什么" -Publish</code></pre>
     </div>
     <p class="muted">
       脚本会在 <code>outputs/</code> 下生成 <code>myapp-site/</code>，用统一的设计系统搭好骨架，

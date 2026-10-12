@@ -20,7 +20,7 @@ deploy/new-software.ps1       一条命令生成 + 上线一个新软件站
 
 ```powershell
 cd outputs/lab-hub
-pwsh deploy/new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明" -Publish
+powershell -NoProfile -File deploy\new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明" -Publish
 ```
 
 脚本做的事：在 `outputs/` 下新建 `myapp-site/`（复制设计系统与骨架）、替换标题与描述占位符、

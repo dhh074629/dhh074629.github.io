@@ -1,8 +1,10 @@
 # 一条命令生成一个新软件站，可选直接上线。
 #
 # 用法：
-#   pwsh deploy/new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明它解决什么"
-#   pwsh deploy/new-software.ps1 -Name myapp-site -Title "我的软件" -Description "..." -Publish
+#   powershell -NoProfile -File deploy\new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明它解决什么"
+#   powershell -NoProfile -File deploy\new-software.ps1 -Name myapp-site -Title "我的软件" -Description "..." -Publish
+#
+# 注意：本机只装了 Windows PowerShell（没有 pwsh），所以统一用 powershell 调用。
 #
 # 不带 -Publish：只在 outputs/ 下生成站点骨架并本地提交，方便先写内容。
 # 带   -Publish：另外创建公开仓库、开启 Pages、推送，并把卡片登记到根站首页。
@@ -61,7 +63,7 @@ $Description
 ## 上线
 
 ``````powershell
-pwsh deploy/publish-github.ps1
+powershell -NoProfile -File deploy\publish-github.ps1
 ``````
 
 发布后地址形如 ``https://<你的用户名>.github.io/$Name/``，每次 ``git push`` 自动重新部署。
@@ -134,5 +136,5 @@ if ($Publish) {
   Write-Host "  仓库: https://github.com/$owner/$Name"
   Write-Host "  站点: https://$owner.github.io/$Name/  (约 1 分钟后生效)"
 } else {
-  Write-Host "  写好内容后执行: pwsh deploy/publish-github.ps1"
+  Write-Host "  写好内容后执行: powershell -NoProfile -File deploy\publish-github.ps1"
 }
