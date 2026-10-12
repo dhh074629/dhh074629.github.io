@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>软件索引</title>
+<meta name="description" content="一个入口找齐所有软件：每个软件一个仓库、一个独立站点，坏了一个不影响其他。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">软件<span>索引</span></a>
+    <nav>
+      <a href="#projects">全部软件</a>
+      <a href="#add">怎么加新软件</a>
+      <a href="#why">为什么这样摆</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <p class="eyebrow">一个入口 · 各自独立 · 免费托管</p>
+    <h1>我做过的软件，<br>都在这一页</h1>
+    <p class="lede">
+      每个软件一个仓库、一个独立站点，挂在同一个域名下面。
+      改坏其中一个，其他照常在线；想归档某一项，也不会牵动别人。
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">看全部 <span id="count">0</span> 个</a>
+      <a class="btn" href="#add">加一个新软件</a>
+    </div>
+    <ul class="chips">
+      <li>纯静态，零依赖</li>
+      <li>推送即部署</li>
+      <li>加新软件约 1 分钟</li>
+      <li>不用备案</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="wrap band">
+    <h2>全部软件</h2>
+    <p class="sub">点击卡片进入各自的站点。</p>
+    <div class="cards" id="projects-grid"></div>
+  </section>
+
+  <section id="add" class="wrap band">
+    <h2>怎么加一个新软件</h2>
+    <p class="sub">一条命令：复制设计模板、建仓库、开 Pages、在首页登记一张卡片。</p>
+    <div class="codeblock">
+      <button class="copy" type="button" data-copy="cmd-add">复制</button>
+      <pre id="cmd-add"><code>cd outputs/lab-hub
+pwsh deploy/new-software.ps1 -Name myapp-site -Title "我的软件" -Description "一句话说明它解决什么" -Publish</code></pre>
+    </div>
+    <p class="muted">
+      脚本会在 <code>outputs/</code> 下生成 <code>myapp-site/</code>，用统一的设计系统搭好骨架，
+      创建公开仓库并开启 Pages，最后把条目写进 <code>projects.js</code>，这一页刷新就能看到新卡片。
+      去掉 <code>-Publish</code> 则只在本地生成，先写好内容再上线。
+    </p>
+  </section>
+
+  <section id="why" class="wrap band">
+    <h2>为什么这样摆</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>每个软件一个仓库</h3>
+        <p>独立部署、独立历史。一个项目改出问题，不会连累其他站点；不想要了直接归档，不影响别人。</p>
+      </div>
+      <div class="card">
+        <h3>根路径留给首页</h3>
+        <p>仓库名正好是 <code>&lt;用户名&gt;.github.io</code> 时，它的站点独占域名根路径，其他仓库自动落到 <code>/&lt;仓库名&gt;/</code>。</p>
+      </div>
+      <div class="card">
+        <h3>设计系统只有一份</h3>
+        <p>配色、字体、卡片样式都在 <code>styles.css</code> 里。新软件复制它，改一处全站生效，不会越做越乱。</p>
+      </div>
+      <div class="card">
+        <h3>速度不够再加一层</h3>
+        <p>GitHub Pages 在国内偶发慢。真要让别人常看时，套一层 Cloudflare Pages 或国内 OSS+CDN 即可，源头仍是这个仓库。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>软件索引 · 托管于 GitHub Pages · 每个软件一个仓库</p>
+</footer>
+<script src="projects.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

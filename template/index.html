@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">{{TITLE}}</a>
+    <nav>
+      <a href="#problem">解决什么</a>
+      <a href="#how">怎么用</a>
+      <a href="../">← 全部软件</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <p class="eyebrow">一句话定位 · 建议在这里写清它给谁用</p>
+    <h1>{{TITLE}}</h1>
+    <p class="lede">{{DESC}}</p>
+    <div class="cta">
+      <a class="btn primary" href="#how">怎么用</a>
+      <a class="btn" href="#problem">它解决什么问题</a>
+    </div>
+    <ul class="chips">
+      <li>零依赖</li>
+      <li>本地可跑</li>
+      <li>（按需改写这几条标签）</li>
+    </ul>
+  </section>
+
+  <section id="problem" class="wrap band">
+    <h2>它解决什么问题</h2>
+    <p class="sub">用两三句话说清痛点，别写形容词，写具体场景。</p>
+    <div class="cards">
+      <div class="card">
+        <h3>原来的做法</h3>
+        <ul>
+          <li>（这里写痛点一）</li>
+          <li>（痛点二）</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>现在</h3>
+        <ul>
+          <li>（这里写它怎么解决）</li>
+          <li>（代价与前提）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="wrap band">
+    <h2>怎么用</h2>
+    <div class="codeblock">
+      <button class="copy" type="button" data-copy="cmd">复制</button>
+      <pre id="cmd"><code>（把安装与运行命令写在这里）</code></pre>
+    </div>
+    <p class="muted">（补充说明：环境要求、配置项、常见坑）</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>{{TITLE}} · <a href="../">返回全部软件</a></p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
